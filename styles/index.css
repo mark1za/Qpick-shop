@@ -1,0 +1,37 @@
+/* fonts */
+@import url(../styles/font.css);
+/* header */
+@import url(../styles/css-components/header.css);
+/* Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    border: none;
+    background: none;
+    color: #000;
+    box-sizing:border-box;
+}
+body{
+    background-color: #EAEAEA;
+
+}
+
+*:focus {
+    outline: none;
+}
+
+*:visited {
+    color: #000;
+}
+
+/* Variables */
+
+:root {
+    --container-width: 1110px;
+    --black: #101010;
+    --grey: #838383;
+}
+
+
