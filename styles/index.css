@@ -1,37 +1,281 @@
-/* fonts */
-@import url(../styles/font.css);
-/* header */
-@import url(../styles/css-components/header.css);
-/* Reset  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style-type: none;
-    border: none;
-    background: none;
-    color: #000;
-    box-sizing:border-box;
-}
-body{
-    background-color: #EAEAEA;
-
+  font-family: "Montserrat", sans-serif;
 }
 
-*:focus {
-    outline: none;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  border: none;
+  background: none;
+  color: #000;
+  box-sizing: border-box;
 }
-
 *:visited {
-    color: #000;
+  color: #000;
+}
+*:focus {
+  outline: none;
 }
 
-/* Variables */
-
-:root {
-    --container-width: 1110px;
-    --black: #101010;
-    --grey: #838383;
+body {
+  background-color: #EAEAEA;
 }
 
+/* Header  */
+.header {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 22px;
+}
+.header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo-link {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #101010;
+}
+.header .nav {
+  margin-left: auto;
+}
+.header .dropdown-menu {
+  position: relative;
+  margin-left: 75px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: var(--black);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header .dropdown-menu .dropdown-menu-toggle {
+  cursor: pointer;
+}
+.header .dropdown-menu .dropdown-menu-toggle:active {
+  transform: translateY(2px);
+  transition: 0.13s;
+}
+.header .dropdown-menu .menu-list {
+  top: 100%;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: #EAEAEA;
+  position: absolute;
+  border-radius: 0px 0px 20px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+.header .dropdown-menu .menu-item {
+  cursor: pointer;
+}
+.header .dropdown-menu .md {
+  margin-right: auto;
+  color: #838383;
+  height: 22px;
+  width: 22px;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
+.header .nav-list {
+  display: flex;
+  gap: 45px;
+}
+.header .nav-list .md {
+  color: #838383;
+  width: 23px;
+  height: 23px;
+}
 
+.wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.main {
+  width: 100%;
+}
+
+.banner {
+  height: 197px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 30px;
+  background: url(/assets/img/iPhone-13-Pro-Max-silver-1000x1000\ 1.png), #000;
+  background-repeat: no-repeat;
+  background-position: 626px center;
+}
+.banner .title {
+  margin-left: 230px;
+  width: 100%;
+  max-width: 283px;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.cases .title {
+  margin-top: 44px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #838383;
+}
+.cases .card-list-skin {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 31px;
+}
+.cases .card-list-skin .card {
+  display: flex;
+  width: 100%;
+  max-width: 349px;
+  min-height: 408px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.cases .card-list-skin .card .subtitle {
+  margin-top: 21px;
+}
+.cases .card-list-headphones {
+  flex-wrap: wrap;
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  gap: 31px;
+}
+.cases .card-list-headphones .card {
+  padding: 15px 21px 32px;
+  display: flex;
+  width: 100%;
+  max-width: 349px;
+  min-height: 408px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+.cases .card-list-headphones .card img {
+  margin-bottom: auto;
+}
+.cases .card-list-headphones .card .info {
+  width: 100%;
+  max-width: 327px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.cases .card-list-headphones .card .info .model {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: #1C1C27;
+}
+.cases .card-list-headphones .card .info .price {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: #FFA542;
+}
+.cases .card-list-headphones .card .rating {
+  width: 100%;
+  max-width: 327px;
+  display: flex;
+  align-items: center;
+}
+.cases .card-list-headphones .card .rating .number {
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 21px;
+  color: #838383;
+}
+.cases .card-list-headphones .card .md {
+  color: #FFCE7F;
+  width: 23px;
+  height: 22px;
+}
+
+.footer {
+  margin-top: 60px;
+}
+.footer .wrapper {
+  width: 100%;
+  background: #ffffff;
+  height: 149px;
+  border-radius: 30px 30px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.footer .logo .logo-link {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #101010;
+}
+.footer .nav-list .nav .nav-item {
+  margin-top: 8px;
+}
+.footer .nav-list .nav .nav-item .nav-link {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+}
+.footer .languages .icon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  color: #838383;
+}
+.footer .languages .condition {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+}
+.footer .languages .nav-list {
+  display: flex;
+  gap: 17px;
+}
+.footer .networks {
+  display: flex;
+  gap: 17px;
+}
+.footer .networks .network {
+  width: 30px;
+  height: 30px;
+}
+
+.rotated {
+  transform: rotate(180deg);
+  transition: 0.2s;
+}/*# sourceMappingURL=index.css.map */
